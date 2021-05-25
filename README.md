@@ -1,5 +1,7 @@
 # Visual communication of object concepts at different levels of abstraction
 
+Project investigating our ability to produce drawings of specific entities (e.g., "Garfield") as well as general categories (e.g., "cat").
+
 This is an example of how a cogtoolslab project repo should be organized.
 
 It contains several subdirectories that will contain standard elements of almost every project:
