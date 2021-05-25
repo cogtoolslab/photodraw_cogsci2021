@@ -1,6 +1,6 @@
 This directory contains the code necessary to run the `kiddraw` experiment. 
 
-<img src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/kiddraw/stimuli/photo_cue_demo.png" width="200"/>
+<img src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/kiddraw/stimuli/photo_cue_demo.png" width="600"/>
 
 ### How to run the experiment
 - SSH into user@cogtoolslab.org 
