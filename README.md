@@ -1,4 +1,4 @@
-# Project Template
+# Visual communication of object concepts at different levels of abstraction
 
 This is an example of how a cogtoolslab project repo should be organized.
 
