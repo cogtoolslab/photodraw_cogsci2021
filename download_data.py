@@ -38,4 +38,5 @@ if __name__ == "__main__":
     if overwrite == True or os.path.exists(s3_object.key)==False:
       progressBar(s3_object.key, i+1, len(keys))
       b.download_file(s3_object.key, s3_object.key)
+  print('All done!')
   print()
