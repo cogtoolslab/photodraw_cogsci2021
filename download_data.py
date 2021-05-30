@@ -1,4 +1,4 @@
-import os, sys, boto3
+import os, boto3
 
 '''
 To download data, use command: python download_data.py in the main project directory
@@ -21,7 +21,7 @@ def progressBar(key, current, total, barLength = 20):
 overwrite=False
 
 if __name__ == "__main__":
-  
+
   s3 = boto3.resource('s3')
   b = s3.Bucket('photodraw-public')
   keys = [obj.key for obj in b.objects.all()]  
