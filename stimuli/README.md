@@ -15,7 +15,7 @@ Contains jupyter notebooks and two small csv files needed for generating `photod
 ## To appear after running `download_data.py`:
 
 ### `/photodraw32_stims`
-Contains all photo-cue stimuli for the 32 categories used in the `photodraw2x2` experiment.
+Contains all photo-cue stimuli for the 32 categories used in the `photodraw2x2` experiment. All 32 stimuli per category can be viewed in a single file in `photodraw_cogsci2021/gallery/photodraw2x2_stims_gallery`.
 
 ### `/photodraw_stims`
 Contains all photo-cue stimuli for the `kiddraw` experiment.
