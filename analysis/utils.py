@@ -213,7 +213,7 @@ def generate_acc_probs(features, metadata, num_splits=5, num_repeats=1, alt_labe
 
     if alt_labels == None:
         for i in range(12):
-            class_probs.append(frame[frame.category == i]['class_probs'].values.mean(axis=0))
+            class_probs.append(frame[frame.category == classes[2][i]]['class_probs'].values.mean(axis=0))
     else: 
         for i in sorted(frame[classes[1]].unique()):
             class_probs.append(frame[frame[classes[1]] == i]['class_probs'].values.mean(axis=0))

@@ -1,0 +1,219 @@
+---
+title: "photodraw_analysis_R"
+author: "Justin Yang"
+date: "7/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(lme4)
+library(lmerTest)
+library(tidyverse)
+library(reshape2)
+library(dplyr)
+library(Hmisc)
+library(ggthemes)
+library(tidyboot)
+library(wesanderson)
+library(ggpubr)
+```
+
+## Load in data 
+
+```{r setup}
+analysis_dir <- getwd()
+setwd('..')
+photodraw_dir <- getwd()
+results_dir <- file.path(photodraw_dir, 'results')
+csv_dir <- file.path(results_dir, 'csv')
+
+stroke_data <- read.csv(file.path(csv_dir,'photodraw_stroke_data.csv'))
+sketch_data <- read.csv(file.path(csv_dir,'photodraw_sketch_data.csv'))
+survey_data <- read.csv(file.path(csv_dir,'photodraw_survey_data.csv'))
+
+sketch_data <- transform(sketch_data, isInvalid = as.logical(isInvalid),
+                                      isOutlier = as.logical(isOutlier))
+sketch_data <- within(sketch_data, cat_id <- paste(sketch_data$category, sketch_data$photoid, sep="_"))
+str(sketch_data)
+```
+
+## Construct statistical models
+```{r}
+mdl <- lmer(numStrokes ~ condition + (1 + condition | gameID) + (1 | cat_id), filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE))
+summary(mdl)
+mean(filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE, condition=='text')[['numStrokes']])
+```
+
+```{r}
+mdl <- lmer(activeSketchTime ~ condition + (1 + condition | gameID) + (1 |cat_id), data = filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE))
+summary(mdl)
+```
+
+```{r}
+mdl <- lmer(totalInk ~ condition + (1 + condition | gameID) + (1 | cat_id), filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE))
+summary(mdl)
+```
+
+```{r}
+mdl <- glmer(true_predict_fc6 ~ condition + (1 | gameID) + (1 | cat_id), filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE), family = binomial, nAGQ=0)
+summary(mdl)
+```
+
+```{r}
+mdl <- lmer(prob_true_predict_fc6_logodds ~ condition + (1 | gameID) + (1 | cat_id), filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE))
+summary(mdl)
+```
+
+
+```{r}
+mdl <- lmer(prob_true_predict_instance_logodds ~ condition + (1 | gameID) + (1 | cat_id), filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE))
+summary(mdl)
+```
+
+## Visualize num strokes
+
+```{r get conf. intervals}
+bstrap_activeSketchTime_photo <- c()
+bstrap_activeSketchTime_text <- c()
+bstrap_numStrokes_photo <- c()
+bstrap_numStrokes_text <- c()
+bstrap_totalInk_photo <- c()
+bstrap_totalInk_text <- c()
+filtered_data <- filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE)
+filtered_photo <- subset(filtered_data, condition=="photo")
+filtered_text <- subset(filtered_data, condition=="text")
+for (i in 1:1000){
+  bstrap_activeSketchTime_photo <- c(bstrap_activeSketchTime_photo, mean(sample(filtered_photo$activeSketchTime,100,replace=T)))
+  bstrap_activeSketchTime_text <- c(bstrap_activeSketchTime_text, mean(sample(filtered_text$activeSketchTime,100,replace=T)))
+  bstrap_numStrokes_photo <- c(bstrap_numStrokes_photo, mean(sample(filtered_photo$numStrokes,100,replace=T)))
+  bstrap_numStrokes_text <- c(bstrap_numStrokes_text, mean(sample(filtered_text$numStrokes,100,replace=T)))
+  bstrap_totalInk_photo <- c(bstrap_totalInk_photo, mean(sample(filtered_photo$totalInk,100,replace=T)))
+  bstrap_totalInk_text <- c(bstrap_totalInk_text, mean(sample(filtered_text$totalInk,100,replace=T)))
+}
+#numStrokes:
+print("The 95% CI for numStrokes is:")
+print(paste("Photo:",quantile(bstrap_numStrokes_photo,.025)[[1]], ',' ,quantile(bstrap_numStrokes_photo,.975)[[1]]))
+print(paste("Text:",quantile(bstrap_numStrokes_text,.025)[[1]], ',' ,quantile(bstrap_numStrokes_text,.975)[[1]]))
+# totalInk:
+print("The 95% CI for activeSketchTime is:")
+print(paste("Photo:",quantile(bstrap_activeSketchTime_photo,.025)[[1]], ',' ,quantile(bstrap_activeSketchTime_photo,.975)[[1]]))
+print(paste("Text:",quantile(bstrap_activeSketchTime_text,.025)[[1]], ',' ,quantile(bstrap_activeSketchTime_text,.975)[[1]]))
+# activeSketchTime
+print("The 95% CI for totalInk is:")
+print(paste("Photo:",quantile(bstrap_totalInk_photo,.025)[[1]], ',' ,quantile(bstrap_totalInk_photo,.975)[[1]]))
+print(paste("Text:",quantile(bstrap_totalInk_text,.025)[[1]], ',' ,quantile(bstrap_totalInk_text,.975)[[1]]))
+```
+
+```{r, fig.width=4,fig.height=4}
+
+df = filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE)[c("condition","numStrokes","prob_true_predict_fc6_logodds")] 
+
+df.strokes <- df %>%
+  group_by(condition) %>%
+  tidyboot_mean(numStrokes)
+df.probs <- df %>%
+  group_by(condition) %>%
+  tidyboot_mean(prob_true_predict_fc6_logodds)
+
+p1 <- df.strokes %>% 
+  ggplot(aes(x=condition, y=mean, fill=condition)) +
+  geom_bar(stat="identity", width=0.9, show.legend=F) + scale_fill_manual(values=rev(wes_palette(n=2, name="Royal1"))) +  
+  geom_errorbar(aes(ymin=ci_lower, ymax=ci_upper), width = 0, size = 1) +
+  theme_few() + 
+  coord_cartesian(ylim=c(0, 15)) +
+  labs(y="number of strokes")
+p2 <- df.probs %>% 
+  ggplot(aes(x=condition, y=mean, fill=condition)) +
+  geom_bar(stat="identity", width=0.9, show.legend=F) + scale_fill_manual(values=rev(wes_palette(n=2, name="Royal1"))) +
+  geom_errorbar(aes(ymin=ci_lower, ymax=ci_upper), width = 0, size = 1) +
+  theme_few() + 
+  coord_cartesian(ylim=c(0, 2.5)) + 
+  labs(y="target probability")
+ggarrange(p1, p2,align = "v")
+
+ggsave('../results/plots/photodraw_strokes_clfprobs.pdf', height = 10, width = 8, units = 'cm', useDingbats = F)
+```
+
+
+### Not appearing in paper (yet!)
+
+```{r}
+library(car)
+
+# is there an interaction between level of abstraction in the classifier and condition?
+d = filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE)[c("category", "condition", "cat_id","gameID", "prob_true_predict_fc6", "prob_true_predict_pixel")]
+
+# melt fc6 and pixel recognizabilities into one column
+d = melt(data = d, id.vars = c("gameID", "category", "condition", "cat_id"), measure.vars = c("prob_true_predict_pixel", "prob_true_predict_fc6"))
+d <- na.omit(d)
+model = lmer(value ~ condition + variable + condition:variable + (1 | category) + (1 | gameID) , data = d)
+summary(model)
+Anova(model)
+anova(model)
+```
+
+```{r}
+model = lmer(value ~ variable + (1 | cat_id) + (1 | gameID) , data = d)
+summary(model)
+#mean(filter(d, variable == 'prob_true_predict_fc6', condition == 'photo')[['value']])
+```
+
+
+```{r, fig.width=3,fig.height=4}
+d.errbar <- d %>%
+  group_by(variable) %>%
+  tidyboot_mean(value)
+d.errbar %>% 
+  ggplot(aes(x=variable, y=mean, fill=variable)) +
+  geom_bar(stat="identity", width=0.9, show.legend=F) + scale_fill_manual(values=rev(wes_palette(n=2, name="Royal1"))) +  
+  geom_errorbar(aes(ymin=ci_lower, ymax=ci_upper), width = 0, size = 1) +
+  theme_few() + 
+  coord_cartesian(ylim=c(0, 1)) +
+  scale_x_discrete(labels = c('pixel-level','fc6-level')) +
+  labs(x="feature level",y="Probability estimate")
+#, title="Sketch recognizability across feature level")
+d
+
+```
+
+```{r, fig.width=6,fig.height=4}
+
+df = filter(sketch_data, isInvalid==FALSE & isOutlier==FALSE)[c("condition","numStrokes", "totalInk", "activeSketchTime")] 
+
+df.strokes <- df %>%
+  group_by(condition) %>%
+  tidyboot_mean(numStrokes)
+df.ink <- df %>%
+  group_by(condition) %>%
+  tidyboot_mean(totalInk)
+df.time <- df %>%
+  group_by(condition) %>%
+  tidyboot_mean(activeSketchTime)
+
+p1 <- df.strokes %>% 
+  ggplot(aes(x=condition, y=mean, fill=condition)) +
+  geom_bar(stat="identity", width=0.9, show.legend=F) + scale_fill_manual(values=rev(wes_palette(n=2, name="Royal1"))) +  
+  geom_errorbar(aes(ymin=ci_lower, ymax=ci_upper), width = 0, size = 1) +
+  theme_few() + 
+  coord_cartesian(ylim=c(0, 15)) +
+  labs(y="number of strokes") 
+p2 <- df.ink %>% 
+  ggplot(aes(x=condition, y=mean, fill=condition)) +
+  geom_bar(stat="identity", width=0.9, show.legend=F) + scale_fill_manual(values=rev(wes_palette(n=2, name="Royal1"))) +  
+  geom_errorbar(aes(ymin=ci_lower, ymax=ci_upper), width = 0, size = 1) +
+  theme_few() + 
+  coord_cartesian(ylim=c(0, 1500)) +
+  labs(y="total ink used") 
+p3 <- df.time %>% 
+  ggplot(aes(x=condition, y=mean, fill=condition)) +
+  geom_bar(stat="identity", width=0.9, show.legend=F) + scale_fill_manual(values=rev(wes_palette(n=2, name="Royal1"))) +  
+  geom_errorbar(aes(ymin=ci_lower, ymax=ci_upper), width = 0, size = 1) +
+  theme_few() + 
+  coord_cartesian(ylim=c(0, 40000)) +
+  labs(y="active sketch time") 
+
+ggarrange(p1, p3, p2, ncol=3, nrow=1)
+
+#ggsave('../results/plots/photodraw_strokes_clfprobs.pdf', height = 10, width = 8, units = 'cm', useDingbats = F)
+```
