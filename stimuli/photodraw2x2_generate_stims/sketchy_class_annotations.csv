@@ -1,0 +1,126 @@
+Superordinate,Basic-level,Natural,Familiar,Large,Animate,Comments
+vehicle,airplane,FALSE,TRUE,TRUE,TRUE,yes
+tool,alarm_clock,FALSE,TRUE,FALSE,FALSE,"moderately (it can be broken down mainly into digital and analog, circle/square, hello kitty / not hello kitty)"
+animal,ant,TRUE,TRUE,FALSE,TRUE,for the most part; since they're small they might all look the same though; lots of pose variance
+animal,ape,TRUE,FALSE,TRUE,TRUE,"yes, esp in terms of pose"
+food,apple,TRUE,TRUE,FALSE,FALSE,"kind of, but mainly in terms of color and if other objects are associated with it"
+clothing,armor,FALSE,FALSE,TRUE,FALSE,"not that much, all the armor faces forward and the main variance is if it's body armor or full armor"
+tool,axe,FALSE,FALSE,FALSE,FALSE,yes -- in terms of pose and head shape
+food,banana,TRUE,TRUE,FALSE,FALSE,"somewhat, only variance  in pose and if its peeled/bitten"
+animal,bat,TRUE,FALSE,FALSE,TRUE,"yes; extremely high pose variance, but not as much in prototypicality"
+animal,bear,TRUE,FALSE,TRUE,TRUE,"yes, mainly in terms of pose/ if its a panda or not"
+animal,bee,TRUE,TRUE,FALSE,TRUE,only really in pose
+animal,beetle,TRUE,TRUE,FALSE,TRUE,"yes, but there's a lot of variance in color that can't be captured"
+tool,bell,FALSE,FALSE,NaN,FALSE,no; bells basically all look the same
+furniture,bench,FALSE,TRUE,TRUE,FALSE,"relatively little, most pictures are all front facing park benches "
+vehicle,bicycle,FALSE,TRUE,TRUE,TRUE,"no, only variance is left/right facignn bikes, with a few outliers"
+vehicle,blimp,FALSE,FALSE,TRUE,FALSE,yes; in terms of pose
+food,bread,FALSE,TRUE,FALSE,FALSE,"yes, some are square, some of baguettes, round etc"
+animal,butterfly,TRUE,TRUE,FALSE,TRUE,yes! so many patterns on the wings
+place,cabin,FALSE,FALSE,TRUE,FALSE,variance mainly in pose
+animal,camel,TRUE,FALSE,TRUE,TRUE,"yes, in terms of pose/ only showing the head"
+tool,candle,FALSE,TRUE,FALSE,FALSE,"no; there's two main divisions: skinny/stout, on cake/by itself"
+tool,cannon,FALSE,FALSE,TRUE,FALSE,"somewhat; has high pose variance, and decent variance in length of cannon"
+vehicle,car_(sedan),FALSE,TRUE,TRUE,TRUE,"yes, esp in pose but has many different models of cars"
+place,castle,FALSE,FALSE,TRUE,FALSE,"yes! wide ones, lopsided ones"
+animal,cat,TRUE,TRUE,FALSE,TRUE,"yes, many different cat poses, but a lot of variance is in fur patterns"
+furniture,chair,FALSE,TRUE,FALSE,FALSE,"somewhat, but little pose variance"
+animal,chicken,TRUE,TRUE,FALSE,TRUE,"not much, only in pose"
+place,church,FALSE,TRUE,TRUE,FALSE,"yes, buildings seem to have high variance"
+furniture,couch,FALSE,TRUE,TRUE,FALSE,"no, they're all front facing and the variance is in the color/patterns of the couches"
+animal,cow,TRUE,FALSE,TRUE,TRUE,"moderate variance in pose, some variance in the black/white patterns but people didn't draw them "
+animal,crab,TRUE,FALSE,FALSE,TRUE,"decent, a lot of variance in claw position"
+animal,crocodilian,TRUE,FALSE,TRUE,TRUE,low variance except for pose
+tool,cup,FALSE,TRUE,FALSE,FALSE,"yes, a lot of different types of cups"
+animal,deer,TRUE,FALSE,TRUE,TRUE,"not very much, mainly in pose"
+animal,dog,TRUE,TRUE,FALSE,TRUE,"yes, many different poses"
+animal,dolphin,TRUE,TRUE,TRUE,TRUE,"not really, just in pose"
+,door,FALSE,TRUE,TRUE,FALSE,"no orientation variance, but there's a lot of different shapes"
+animal,duck,TRUE,TRUE,FALSE,TRUE,"somewhat, has a few flying fucks and different positions"
+animal,elephant,TRUE,FALSE,TRUE,TRUE,"yes, pictures taken at many angles doing different things"
+tool,eyeglasses,FALSE,TRUE,FALSE,FALSE,no
+,fan,FALSE,TRUE,FALSE,FALSE,"yes, esp in number of blades"
+animal,fish,TRUE,TRUE,FALSE,TRUE,"yes, there are a good number of different species"
+,flower,TRUE,TRUE,FALSE,FALSE,"yes, a lot of sunflowers but a lot of other things too"
+animal,frog,TRUE,FALSE,FALSE,TRUE,"somewhat, mainly in the orientation picture was taken"
+,geyser,TRUE,FALSE,TRUE,FALSE,"nope, they all look the same to me"
+animal,giraffe,TRUE,FALSE,TRUE,TRUE,"not really, some are full body and some are just the neck up"
+instrument,guitar,FALSE,TRUE,FALSE,FALSE,nope
+food,hamburger,FALSE,TRUE,FALSE,FALSE,"not really, the main difference is in lighting and camera angle"
+tool,hammer,FALSE,FALSE,FALSE,FALSE,"nope, only differences are in orientation"
+instrument,harp,FALSE,FALSE,TRUE,FALSE,"no, main difference is left and right facing harps "
+clothing,hat,FALSE,TRUE,FALSE,FALSE,"yes, there's a bunch of different types of hat"
+animal,hedgehog,TRUE,FALSE,FALSE,TRUE,"kind of, some are more quill-y than others"
+vehicle,helicopter,FALSE,FALSE,TRUE,TRUE,a lot of variance in orientation
+animal,hermit_crab,TRUE,FALSE,FALSE,TRUE,"yes, though pretty fine grained variance (which might be good)"
+animal,horse,TRUE,TRUE,TRUE,TRUE,"relatively little, just camera angle + some patterns here and there"
+vehicle,hot-air_balloon,FALSE,FALSE,TRUE,FALSE,"no, the variance lies in the colors mainly"
+food,hotdog,FALSE,FALSE,FALSE,FALSE,"yes, but only in camera angle and what toppings there are"
+tool,hourglass,FALSE,FALSE,FALSE,FALSE,"no, not even in camera angle"
+,jack-o-lantern,FALSE,FALSE,FALSE,FALSE,yes! the faces are all different
+animal,jellyfish,TRUE,FALSE,FALSE,TRUE,"yes, depending on how detailed the participants draw the things lke tentacles"
+animal,kangaroo,TRUE,FALSE,TRUE,TRUE,"yes, they have a lot of different poses"
+tool,knife,FALSE,TRUE,FALSE,FALSE,"moderately, just vary in their orientation"
+animal,lion,TRUE,FALSE,TRUE,TRUE,"yes, good pose variance, also male/female lions (manes)"
+animal,lizard,TRUE,FALSE,FALSE,TRUE,"not much, only in pose"
+animal,lobster,TRUE,FALSE,FALSE,TRUE,"no, only in the angle picture taken"
+vehicle,motorcycle,FALSE,FALSE,TRUE,FALSE,"yes, but the differences are hard to draw"
+animal,mouse,TRUE,FALSE,FALSE,TRUE,"no, slight variance in what the mouse is doing"
+food,mushroom,TRUE,TRUE,FALSE,FALSE,"yes, lots of different types of mushroom"
+animal,owl,TRUE,FALSE,FALSE,TRUE,moderate; little pose variance so the distinctions are in the patterns on face
+animal,parrot,TRUE,FALSE,FALSE,TRUE,not much-- all the variance is in the parrot color patterns
+food,pear,TRUE,TRUE,FALSE,FALSE,"no, there are a few cut pears but they mostly look the same"
+animal,penguin,TRUE,TRUE,NaN,TRUE,"somewhat, if participants draw patterns of black/white"
+,piano,FALSE,TRUE,TRUE,FALSE,"yes, but the differences are hard to draw"
+vehicle,pickup_truck,FALSE,TRUE,TRUE,TRUE,"yes, there's many different angles and models"
+animal,pig,TRUE,TRUE,FALSE,TRUE,"decent, many angles picture is taken"
+food,pineapple,TRUE,TRUE,FALSE,FALSE,"no, they're almost all facing upright and uncut"
+tool,pistol,FALSE,TRUE,FALSE,FALSE,depends on how detailed people draw them
+food,pizza,FALSE,TRUE,FALSE,FALSE,"no, the different toppings are too hard to draw"
+food,pretzel,FALSE,FALSE,FALSE,FALSE,"somewhat, there's a lot of different sizes of holes and stuff"
+animal,rabbit,TRUE,TRUE,FALSE,TRUE,"yes, in terms of orientation"
+animal,raccoon,TRUE,TRUE,FALSE,TRUE,yes; they're doing a lot of different things
+tool,racket,FALSE,FALSE,FALSE,FALSE,"no, they just are in different orientations"
+animal,ray,TRUE,FALSE,TRUE,TRUE,"yes, they have different shapes! some are round, some are not, some are flapping too"
+animal,rhinoceros,TRUE,FALSE,TRUE,TRUE,"not that much, but they are pretty atypical"
+tool,rifle,FALSE,FALSE,FALSE,FALSE,"not really, most difference is in orientation "
+,rocket,FALSE,FALSE,TRUE,FALSE,"somewhat if people draw well, some have fins etc."
+vehicle,sailboat,TRUE,FALSE,TRUE,FALSE,"kind of, some of the sails are folded, etc. little pose variance"
+tool,saw,FALSE,FALSE,FALSE,FALSE,"yes, didn't know that there were so many different types of saw"
+instrument,saxophone,FALSE,FALSE,FALSE,FALSE,"no, they're all made the same so the differences are in orientation"
+tool,scissors,FALSE,TRUE,FALSE,FALSE,"not really; only difference in orientation, open/closed"
+animal,scorpion,TRUE,FALSE,FALSE,TRUE,yes; the way they look makes drawing them at different orientations look more different
+animal,seagull,TRUE,TRUE,FALSE,TRUE,"kind of, flying ones, sitting ones, different angles"
+animal,seal,TRUE,TRUE,TRUE,TRUE,"yes, they're taken with many different poses"
+animal,sea_turtle,TRUE,FALSE,TRUE,TRUE,not much; just different camera angles
+animal,shark,TRUE,FALSE,TRUE,TRUE,"not really, but there are hammerhead sharks that look different"
+animal,sheep,TRUE,FALSE,FALSE,TRUE,"yes; some are fluffier than others, some have horns"
+clothing,shoe,FALSE,TRUE,FALSE,FALSE,"yes, many different patterns of shoe"
+place,skyscraper,FALSE,TRUE,TRUE,FALSE,"yes, they have a good number of unique looking skyscrapers"
+animal,snail,TRUE,FALSE,FALSE,TRUE,"not much, just different angles"
+animal,snake,TRUE,FALSE,FALSE,TRUE,yes! they wiggle uniquely
+animal,songbird,TRUE,TRUE,FALSE,TRUE,"kind of, different poses (left/right) and some different patterns, but no flying ones"
+animal,spider,TRUE,TRUE,FALSE,TRUE,"yes, many different species"
+tool,spoon,FALSE,TRUE,FALSE,FALSE,"not much; mainly big and small spoons, orientation"
+animal,squirrel,TRUE,TRUE,FALSE,TRUE,"yes, they have different poses, tail does different things"
+animal,starfish,TRUE,FALSE,FALSE,TRUE,"yes, somewhat; some are skinny and some are moving"
+food,strawberry,TRUE,TRUE,FALSE,FALSE,"kind of, there are some mutant strawberries"
+animal,swan,TRUE,FALSE,FALSE,TRUE,very little; they all have the same neck orienation and mostly all in the water
+tool,sword,FALSE,FALSE,FALSE,FALSE,"kind of, if they draw the hilts accurately"
+furniture,table,FALSE,TRUE,TRUE,FALSE,"not much, they're either square or rectangles"
+vehicle,tank,FALSE,FALSE,TRUE,TRUE,somewhat; different angles camera takes the picture
+tool,teapot,FALSE,TRUE,FALSE,FALSE,"yes, but mainly in the patterns on the teapot"
+,teddy_bear,FALSE,FALSE,FALSE,FALSE,"kind of; moderate differences in parts (e.g. hat, bowtie)"
+animal,tiger,TRUE,FALSE,TRUE,TRUE,not much; laying down/standing tigers and camera angle different
+,tree,TRUE,TRUE,TRUE,FALSE,"yes, they have varied kinds of trees"
+instrument,trumpet,FALSE,FALSE,FALSE,FALSE,"kind of, but because a bunch of the instruments are not trumpets"
+animal,turtle,TRUE,TRUE,FALSE,TRUE,"not really, onyl difference are in camera angle and turtle shell pattern (which ppts did not sketch clearly)"
+tool,umbrella,FALSE,TRUE,FALSE,FALSE,"moderately; some ae open and some are closed, some have different patterns on them"
+instrument,violin,FALSE,FALSE,FALSE,FALSE,"somewhat; a lot of different orientations, a lot of other non-violin string instruments, some with bow and some without"
+place,volcano,TRUE,FALSE,TRUE,FALSE,"not much, but some of the eruptions are different looking than others"
+animal,wading_bird,TRUE,FALSE,FALSE,TRUE,"kind of, e.g. beak size and pose and orientation"
+vehicle,wheelchair,FALSE,TRUE,FALSE,FALSE,somewhat; if drawings are detailed enough to express the different wheel patterns
+place,windmill,FALSE,FALSE,TRUE,FALSE,"yes; there are old windmills, and also wind turbines; also differnt bunber of ""wings"""
+,window,FALSE,TRUE,FALSE,FALSE,"yes suprisingly, there are different number of supports and different dimensions"
+,wine_bottle,FALSE,TRUE,FALSE,FALSE,"no, they're mostly all upright facing wine bottles"
+animal,zebra,TRUE,FALSE,TRUE,TRUE,"lots of different angles picture is taken, and some are eating "
