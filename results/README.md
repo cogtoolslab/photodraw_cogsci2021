@@ -1,3 +1,5 @@
+# Photodraw results
+
 Contains main results for this project. Running `download_data.py` loads tidy dataframes into the `results/csv` directory, while the various analyses notebooks contribute to the `results/plots` directory.
 
 - `/results/csv`: dataframes
