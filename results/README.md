@@ -14,4 +14,4 @@ Contains main results for this project. Running `download_data.py` loads tidy da
   - `photodraw2x2_instance_recog_survey.csv`contains survey data in the instance-level recognition validation task.
   - `photodraw_metadata_instance.csv` is a helper csv for instance-level classification of the `kiddraw` experiment.
 - `/results/plots`: plots
-
+  - various plots will be loaded in through the various analysis notebooks
