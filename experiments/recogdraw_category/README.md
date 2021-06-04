@@ -1,4 +1,4 @@
-This directory contains the code necessary to run the `recogdraw_category` experiment, which asks participants to match a sketch to its category in a 32-afc setup. We obtained ratings for 12,288 sketches.
+This directory contains the code necessary to run the `recogdraw_category` experiment, which asks participants to match a sketch to its category in a 32-afc setup. We obtained ratings for all 12,288 sketches.
 
 <p align="center" style="font-size: smaller">
   <img width="85%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/recogdraw_category/stimuli/recogdraw_category_exampletrialpng.png"></img>
