@@ -1,7 +1,7 @@
 This directory contains the code necessary to run the `kiddraw` experiment. 
 
 <p align="center" style="font-size: smaller">
-  <img width="100%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/kiddraw/stimuli/photo_cue_demo.png"></img>
+  <img width="85%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/kiddraw/stimuli/photo_cue_demo.png"></img>
 </p>
 
 ### How to run the experiment
