@@ -1,4 +1,4 @@
-# Photodraw stimuli
+# photodraw stimuli
 
 Directory to contain stimulus preprocessing code for this project. Running `download_data.py` creates the stimuli folders and metadata files that these files would have created.
 
