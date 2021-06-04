@@ -1,6 +1,6 @@
 This directory contains the code necessary to run the `photodraw_norming` norming study, which asks participants for subjective typicality ratings for each of the 1024 stimuli. 
 
-<img src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/photodraw_norming/stimuli/example_norming_trial.png" width="600" class="center"/>
+<img src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/photodraw_norming/stimuli/example_norming_trial.png" width="700" class="center"/>
 
 ### How to run the experiment
 - SSH into user@cogtoolslab.org 
