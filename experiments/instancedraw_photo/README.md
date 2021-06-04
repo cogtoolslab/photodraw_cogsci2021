@@ -1,4 +1,4 @@
-This directory contains the code necessary to run the instance-goal, photo-cued factor of the `photodraw2x2` experiment, in which participants 96 were asked to sketch the specific object they were shown.
+This directory contains the code necessary to run the instance-goal, photo-cued factor of the `photodraw2x2` experiment, in which participants 96 were asked to sketch the specific object they were shown. The actual stimuli in `categorydraw_photo` and `instancedraw_photo` are the same, but the instructions are different.
 
 <p align="center" style="font-size: smaller">
   <img width="85%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/instancedraw_photo/stimuli/instance_photo_screencap.gif"></img>
