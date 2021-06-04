@@ -1,4 +1,4 @@
-This directory contains the code necessary to run the category-goal, photo-cued factor of the `photodraw2x2` experiment, in which 96 participants were asked to sketch an object recognizable at the category level, but not at the specificity of the cued image.
+This directory contains the code necessary to run the category-goal, photo-cued factor of the `photodraw2x2` experiment, in which 96 participants were asked to sketch an object recognizable at the category level, but not at the specificity of the cued image. The actual stimuli in `categorydraw_photo` and `instancedraw_photo` are the same, but the instructions are different.
 
 <p align="center" style="font-size: smaller">
   <img width="85%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/categorydraw_photo/stimuli/category_photo_screencap.gif"></img>
