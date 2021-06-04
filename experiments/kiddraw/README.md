@@ -2,12 +2,12 @@ This directory contains the code necessary to run the `kiddraw` experiment.
 
 Photo-cue:
 <p align="center" style="font-size: smaller">
-  <img width="85%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/kiddraw/stimuli/photo_cue_demo.png"></img>
+  <img width="75%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/kiddraw/stimuli/photo_cue_demo.png"></img>
 </p>
 
 Text-cue:
 <p align="center" style="font-size: smaller">
-  <img width="85%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/kiddraw/stimuli/text_cue_demo.png"></img>
+  <img width="75%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/kiddraw/stimuli/text_cue_demo.png"></img>
 </p>
 
 ### How to run the experiment
