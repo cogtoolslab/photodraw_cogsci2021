@@ -23,10 +23,18 @@ _______________________________________________________________
 
 ## Miscellaneous
 
-### `upload_data.ipynb`
+#### `upload_data.ipynb`
 
 Uploads data into public amazon s3 bucket, so that data can be loaded in using `download_daata.py`.
 
-### `utils,py`
+#### `utils,py`
 
 Contains helper functions used throughout the photodraw analysis notebooks. 
+
+#### `embeddings.py` 
+
+Embeds raw pixels features in VGG-19 feature space. Can specify which layer to embed into.
+
+#### `extract_features.py`
+
+Command line script which can be used to convert raw images (sketches) to VGG-19 features.
