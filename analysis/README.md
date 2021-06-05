@@ -2,13 +2,7 @@
 
 Directory to contain analysis notebooks/scripts for this project.
 
-### `upload_data.ipynb`
-
-Uploads data into public amazon s3 bucket, so that data can be loaded in using `download_daata.py`.
-
-### `utils`
-
-Contains helper functions used throughout the photodraw analysis notebooks. 
+_______________________________________________________________
 
 ## `kiddraw`
 
@@ -21,5 +15,18 @@ Contains helper functions used throughout the photodraw analysis notebooks.
 - `kiddraw_analysis_R.Rmd` conducts inferential statistics, fitting the linear mixed-effects models found in _Study 1: How do drawings cued by prototypical exemplars differ from drawings cued by category labels?_. It also constructs the barplots used in `Figure 3`.
 - `classdata.py` houses the `Data` class, which allows for cleaner code in `kiddraw_analysis_2.ipynb`.
 
+_______________________________________________________________
+
 ## `photodraw2x2`
 
+_______________________________________________________________
+
+## Miscellaneous
+
+### `upload_data.ipynb`
+
+Uploads data into public amazon s3 bucket, so that data can be loaded in using `download_daata.py`.
+
+### `utils,py`
+
+Contains helper functions used throughout the photodraw analysis notebooks. 
