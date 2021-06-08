@@ -39,3 +39,7 @@ The `/analysis` directory can be largely categorized into a few main components.
 
 The `/stimuli` directory contains stimulus preprocessing code for the project. Running `download_data.py` downloads the stimuli folders and files that would have been created by running the files in `/stimuli`.
 
+<p align="center" style="font-size: smaller">
+  <img width="75%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/results/plots/photodraw2x2_cats.png"></img><br/>
+  All photo-cue cat stimuli in photodraw2x2 experiment, sorted by participant-rated typicality
+</p>
