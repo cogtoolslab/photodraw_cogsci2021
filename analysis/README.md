@@ -30,6 +30,24 @@ sensory information, goals, and typicality_. It also constructs the plots used i
 
 _______________________________________________________________
 
+## `photodraw_norming`
+
+Finds the typicality of each photo-cue simulus on a likert scale from -2 to 2, 2 being the most typical. `photodraw_norming_analysis.ipynb` tidies up the data from MongoDB (storing it as `photodraw_sketchy32_typicality_ratings.csv`) and explores the correlations in responses for between participants. It also generates plots (`results/plots/ratings/`) detailing the typicality ratings for each category and adds the typicality ratings into `photodraw2x2_sketch_data.csv`.
+
+_______________________________________________________________
+
+## `photodraw_recognition`
+
+`photodraw_recognition_analysis.ipynb` contains setup and exploratory analysis for a followup study not appearing in CogSci 2021. It checks the correspondence between human RT and accuracy on our recognition tasks, compared to the VGG-19 classifier. The notebook also saves the data back into `photodraw2x2_sketch_data.csv`. The full tidy data from this notebook is stored in:
+- `photodraw2x2_category_recog_ratings.csv`
+- `photodraw2x2_category_recog_survey.csv`
+- `photodraw2x2_instance_recog_ratings.csv`
+- `photodraw2x2_instance_recog_survey.csv`
+
+_______________________________________________________________
+
+
+
 ## Miscellaneous
 
 #### `upload_data.ipynb`
