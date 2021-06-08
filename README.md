@@ -9,7 +9,7 @@ To get started, first download the repository and run `download_data.py` in the 
 </p>
 
 ## Experiments
-_______________________________________________________________
+
 
 We ran a series of experiments examining how sensory information and representational goals jointly constrain the content and form of our drawings. In our first experiment (`experiments/kiddraw`) participants produced a total of 12 drawings, corresponding to 12 familiar basic-level categories, where 6 drawings were cued using a category label and the other 6 were cued using a typical exemplar from that category. 
 
@@ -23,7 +23,7 @@ The individual subdirectories within `/experiments` provide greater detail on th
 </p>
 
 ## Analysis
-_______________________________________________________________
+
 
 The `/analysis` directory can be largely categorized into a few main components. `*.Rmd` files are primarily used for inferential statistics and making plots to be used in papers, while `*.ipynb` files are primarily used for data preprocessing (`*_setup.ipynb`) and for exploratory data analysis `*_analysis.ipynb`.
 
@@ -35,7 +35,7 @@ The `/analysis` directory can be largely categorized into a few main components.
 
 
 ## Stimuli
-_______________________________________________________________
+
 
 The `/stimuli` directory contains stimulus preprocessing code for the project. Running `download_data.py` downloads the stimuli folders and files that would have been created by running the files in `/stimuli`.
 
