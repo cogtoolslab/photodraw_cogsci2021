@@ -15,7 +15,7 @@ In the second experiment (`photodraw2x2`) we independently manipulated sensory i
 
 
 <p align="center" style="font-size: smaller">
-  <img width="75%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/results/plots/photodraw2x2_gallery.png"></img>
+  <img width="75%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/results/plots/photodraw2x2_gallery.png"></img><br/>
   Example cues and drawings in photodraw2x2 task
 </p>
 
