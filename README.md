@@ -29,6 +29,7 @@ The `/analysis` directory can be largely categorized into a few main components.
 
 
 <p align="center" style="font-size: smaller">
+  <br/>
   <img width="95%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/results/plots/photodraw2x2_results.png"></img><br/>
   Main results of photodraw2x2
 </p>
