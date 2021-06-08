@@ -19,6 +19,15 @@ _______________________________________________________________
 
 ## `photodraw2x2`
 
+- `photodraw_2x2_setup.ipynb` turns the data stored in MongoDB from the `photodraw2x2` experiment into three tidy dataframes, stored in the `/results` directory: 
+  - `photodraw2x2_sketch_data.csv`
+  - `photodraw2x2_stroke_data.csv`
+  - `photodraw2x2_survey_data.csv`
+- `photodraw_2x2_analysis.ipynb` contains exploratory analyses for the `photodraw2x2` experiment, such as barplots for number of strokes, sketch time, total ink, fc6-level recognizability factored on cue-type and representational goals. We also expore the relationship between classification accuracy and the above low-level variables. We then explore the ratio between category-level variable and image variability in the photo-cued drawings, and constructed representational dissimilarity matrices (RDMs) examining the correlations between our different factors. Constructs figure 5(E) in section "How does photo-cue typicality relate to sketch recognizability?"
+- `photodraw_2x2_analysis_jefan.ipynb` constructs the dataframe `photodraw2x2_category_by_experiment_variances.csv`, which is passed into R for constructing figure 5(D). It examines the within-category variance for each 2x2 factor. 
+- `photodraw_2x2_analysis_R.Rmd` conducts inferential statistics, fitting the linear mixed-effects models found in _Study 2: Disentangling the contributions of
+sensory information, goals, and typicality_. It also constructs the plots used in `Figure 5`.
+
 _______________________________________________________________
 
 ## Miscellaneous
