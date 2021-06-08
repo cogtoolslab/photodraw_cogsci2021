@@ -6,7 +6,6 @@ To get started, first download the repository and run `download_data.py` in the 
 
 <p align="center" style="font-size: smaller">
   <img width="85%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/experiments/instancedraw_photo/stimuli/instance_photo_screencap.gif"></img><br/>
-  Example task procedure for photodraw2x2 experiment
 </p>
 
 ## Experiments
@@ -28,8 +27,9 @@ _______________________________________________________________
 
 The `/analysis` directory can be largely categorized into a few main components. `*.Rmd` files are primarily used for inferential statistics and making plots to be used in papers, while `*.ipynb` files are primarily used for data preprocessing (`*_setup.ipynb`) and for exploratory data analysis `*_analysis.ipynb`.
 
+
 <p align="center" style="font-size: smaller">
-  <img width="85%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/results/plots/photodraw2x2_results.png"></img><br/>
+  <img width="95%" src="https://github.com/cogtoolslab/photodraw_cogsci2021/blob/master/results/plots/photodraw2x2_results.png"></img><br/>
   Main results of photodraw2x2
 </p>
 
