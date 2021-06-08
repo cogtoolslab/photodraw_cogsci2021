@@ -6,7 +6,8 @@ This directory contains the different experiments in the `photodraw` project. Ea
 
 In the CogSci 2021 submission, kiddraw corresponds to the section titled _Study 1: How do drawings cued by prototypical exemplars differ from drawings cued by category labels?_
 
-### `/categorydraw_photo`, `/categorydraw_text`, `/instancedraw_photo`, and `/instancedraw_text`
+### `photodraw2x2`, containing:
+#### `/categorydraw_photo`, `/categorydraw_text`, `/instancedraw_photo`, and `/instancedraw_text`
 
 In the CogSci 2021 submission, these four experiments correspond to the section titled _Study 2: Disentangling the contributions of sensory information, goals, and typicality_. 
 

@@ -19,7 +19,34 @@ _______________________________________________________________
 
 ## `photodraw2x2`
 
+- `photodraw_2x2_setup.ipynb` turns the data stored in MongoDB from the `photodraw2x2` experiment into three tidy dataframes, stored in the `/results` directory: 
+  - `photodraw2x2_sketch_data.csv`
+  - `photodraw2x2_stroke_data.csv`
+  - `photodraw2x2_survey_data.csv`
+- `photodraw_2x2_analysis.ipynb` contains exploratory analyses for the `photodraw2x2` experiment, such as barplots for number of strokes, sketch time, total ink, fc6-level recognizability factored on cue-type and representational goals. We also expore the relationship between classification accuracy and the above low-level variables. We then explore the ratio between category-level variable and image variability in the photo-cued drawings, and constructed representational dissimilarity matrices (RDMs) examining the correlations between our different factors. Constructs figure 5(E) in section "How does photo-cue typicality relate to sketch recognizability?"
+- `photodraw_2x2_analysis_jefan.ipynb` constructs the dataframe `photodraw2x2_category_by_experiment_variances.csv`, which is passed into R for constructing figure 5(D). It examines the within-category variance for each 2x2 factor. 
+- `photodraw_2x2_analysis_R.Rmd` conducts inferential statistics, fitting the linear mixed-effects models found in _Study 2: Disentangling the contributions of
+sensory information, goals, and typicality_. It also constructs the plots used in `Figure 5`.
+
 _______________________________________________________________
+
+## `photodraw_norming`
+
+Finds the typicality of each photo-cue simulus on a likert scale from -2 to 2, 2 being the most typical. `photodraw_norming_analysis.ipynb` tidies up the data from MongoDB (storing it as `photodraw_sketchy32_typicality_ratings.csv`) and explores the correlations in responses for between participants. It also generates plots (`results/plots/ratings/`) detailing the typicality ratings for each category and adds the typicality ratings into `photodraw2x2_sketch_data.csv`.
+
+_______________________________________________________________
+
+## `photodraw_recognition`
+
+`photodraw_recognition_analysis.ipynb` contains setup and exploratory analysis for a followup study not appearing in CogSci 2021. It checks the correspondence between human RT and accuracy on our recognition tasks, compared to the VGG-19 classifier. The notebook also saves the data back into `photodraw2x2_sketch_data.csv`. The full tidy data from this notebook is stored in:
+- `photodraw2x2_category_recog_ratings.csv`
+- `photodraw2x2_category_recog_survey.csv`
+- `photodraw2x2_instance_recog_ratings.csv`
+- `photodraw2x2_instance_recog_survey.csv`
+
+_______________________________________________________________
+
+
 
 ## Miscellaneous
 

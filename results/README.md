@@ -13,7 +13,8 @@ Contains main results for this project. Running `download_data.py` loads tidy da
   - `photodraw2x2_category_recog_ratings.csv` contains information for each rating in the category-level recognition validation task.
   - `photodraw2x2_category_recog_survey.csv` contains survey data in the category-level recognition validation task.
   - `photodraw2x2_instance_recog_ratings.csv` contains information for each rating in the instance-level recognition validation task.
-  - `photodraw2x2_instance_recog_survey.csv`contains survey data in the instance-level recognition validation task.
+  - `photodraw2x2_instance_recog_survey.csv` contains survey data in the instance-level recognition validation task.
+  - `photodraw_sketchy32_typicality_ratings.csv` contains typicality ratings from the typicality norming study. 
   - `photodraw_metadata_instance.csv` is a helper csv for instance-level classification of the `kiddraw` experiment.
 - `/results/plots`: plots
   - various plots will be loaded in through the notebooks in `/analysis`
