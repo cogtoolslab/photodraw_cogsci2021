@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
   print('Initiating download from S3 ...')
   for i, s3_object in enumerate(b.objects.all()):
-    if args.overwrite == True or os.path.exists(s3_object.key)==False:
+    if (args.overwrite == True or os.path.exists(s3_object.key)==False) and (os.path.splitext(s3_object.key)[1] != '.zip'):
       progressBar(s3_object.key, i+1, len(keys))
       b.download_file(s3_object.key, s3_object.key)
   print()
