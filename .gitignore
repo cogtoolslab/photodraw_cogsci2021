@@ -171,3 +171,4 @@ socket.io.js
 experiments/*/photodraw*.js
 
 desktop.ini
+*.zip
